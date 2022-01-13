@@ -11,4 +11,8 @@ print(bicycles[1].title() + "\n")
 
 #The index starts at 0 so the fourth item in the list would be index 3
 #Also python can access the last items in a list with negative numbers 
-print(bicycles[1] + "\n" + bicycles[3] + "\n" + bicycles[-1] + "\n" + bicycles[-2])
+print(bicycles[1] + "\n" + bicycles[3] + "\n" + bicycles[-1] + "\n" + bicycles[-2] + "\n")
+
+#You can use individual values from a list just as you would any other variable
+message = "My first bicycle was a " + bicycles[0].title() + "."
+print(message)
