@@ -16,3 +16,11 @@ print(sorted(cars))
 
 print("\nHere is the original list again:")
 print(cars)
+
+#This is how we reverse the order
+#The list is changed permanently but can be reverted by calling the method a second time on the list
+print('\n')
+print(cars)
+
+cars.reverse()
+print(cars)
