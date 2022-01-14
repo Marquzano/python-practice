@@ -75,3 +75,10 @@ too_expensive = 'ducati'
 motorcycles.remove(too_expensive)
 print(motorcycles)
 print('\nA ' + too_expensive.title() + ' is too expensive for me.')
+
+#Index errors are the most common when working with lists
+motorcycles = ['honda', 'yamaha', 'suzuki']
+#print(motorcycles[3])
+
+#If you want to access the last item in a list index -1 always works unless it is an empty list
+print(motorcycles[-1])
