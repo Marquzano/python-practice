@@ -49,6 +49,11 @@ print('Dear ' + uninvited_guest.title() + ',\nI regret to inform you that you ha
 print('\n')
 print('Dear ' + dinner_guests[0].title() + ',\nI am thankful to let you know that everything is still in line for you to attend the dinner party on the 10th of September.\nSee you soon,\n\tAngel Marquez')
 print('Dear ' + dinner_guests[1].title() + ',\nI am thankful to let you know that everything is still in line for you to attend the dinner party on the 10th of September.\nSee you soon,\n\tAngel Marquez')
+print('\n')
+
+#This is for another exercise to demonstrate the use of the length function
+num_of_guests = len(dinner_guests)
+print("There are " + str(num_of_guests) + " guests coming to the dinner party.")
 
 del dinner_guests[0]
 del dinner_guests[0]
