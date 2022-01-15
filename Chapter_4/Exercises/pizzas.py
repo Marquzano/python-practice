@@ -1,3 +1,4 @@
+#This script demonstrates the basics of using loops in the context of using lists
 #These pizzas are from Two Boots pizza Co.
 
 pizzas = ['vegan larry tate', 'earth mother', 'v for vegan']
