@@ -13,3 +13,13 @@ print('\n')
 #You can also use the range function as well as the list wrapper function to create a list
 numbers = list(range(1,6))
 print(numbers)
+print('\n')
+
+#Certain functions are available specifically for lists of numbers
+digits = list(range(1,10))
+digits.append(0)
+
+print(digits)
+print(min(digits))
+print(max(digits))
+print(sum(digits))
