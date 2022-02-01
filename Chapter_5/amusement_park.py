@@ -36,3 +36,20 @@ else:
     price = 5
 
 print("Your admission cost is $" + str(price) + ".")
+print("\n")
+
+#We can also omit the else block
+#Sometimes it makes sense to just catch the leftover cases in the last elif statement
+#This also makes the code more readable
+
+age = 65
+if age < 4:
+    price = 0
+elif age < 18:
+    price = 5
+elif age < 65:
+    price = 10
+elif age >= 65:
+    price = 5
+
+print("Your admission cost is $" + str(price) + ".")
