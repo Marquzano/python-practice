@@ -13,7 +13,10 @@ import sys
 # The function accepts 2D_INTEGER_ARRAY arr as parameter.
 #
 
-practiceArr = [[1, 2, 3], [4, 5, 6], [9, 8, 9]]
+practiceArr = [[1, 2, 3, 4], 
+               [4, 5, 6, 7], 
+               [9, 8, 9, 2],
+               [3, 7, 8, 1]]
 
 def diagonalDifference(arr):
     # Write your code here
@@ -22,11 +25,11 @@ def diagonalDifference(arr):
     n = len(arr)
     # for lrd they are going to be ascending in paired order
     for i in range(n):
-        lrd += arr[i-1][i-1]
+        lrd += arr[i][i]
         print(lrd)
     # for rld they are going to be ascending in opposite order
     for i in range(n):
-        rld += arr[i-1][n-i-1]
+        rld += arr[i][n-1-i]
         print(rld)
     return abs(lrd - rld)
 
