@@ -69,7 +69,7 @@ def staircase(n):
     hashtags = ""
     for i in range(n):
         hashtags += "#"
-        print("{:>int(n)}".format(hashtags))
+        print("{:>int(n)}".format(hashtags)) # This line cuases a formatting issue
         
 staircase(practiceN)
 
