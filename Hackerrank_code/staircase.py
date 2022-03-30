@@ -61,15 +61,14 @@ import sys
 #  #####
 # ######
 
-practiceN = 4
+practiceN = 10
 
 def staircase(n):
     # Write your code here
-    staircase = ""
     hashtags = ""
     for i in range(n):
         hashtags += "#"
-        print("{:>int(n)}".format(hashtags)) # This line cuases a formatting issue
+        print("{:>{}}".format(hashtags, n))
         
 staircase(practiceN)
 
