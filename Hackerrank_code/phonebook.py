@@ -1,25 +1,27 @@
-phonebook = {}
-    
-# this function adds n entries of names and corresponding phone numbers
+# Enter your code here. Read input from STDIN. Print output to STDOUT
 def entry(n):
+    phonebook = {}
     for i in range(n):
         name, number = input().split(' ')
         phonebook.update({name: number})
+    return phonebook
 
-entry(3)
-
-print(phonebook)
-
-# this function searches the number of names given
-# it gives the key value pair
-# if the name is not in the phonebook then it returns Not Found
-def search(n):
-    for i in range(n):
-        name = input()
+def search(names):
+    for name in names:
         if name not in phonebook:
             print("Not Found")
         else:
             number = phonebook.get(name)
             print(name + "=" + number)
-
-search(4)        
+        
+if __name__ == '__main__':
+    n = int(input())
+    
+    phonebook = entry(n)
+    
+    names = []
+    # need to figure out how to get a continuous stream of input
+    # then I need to determine when to stop trying to get input
+    # and send it to the function
+    names = input().split(" ")
+    search(names)
