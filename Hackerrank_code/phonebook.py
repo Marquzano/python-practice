@@ -10,7 +10,7 @@ entry(3)
 
 print(phonebook)
 
-# this next function searches the number of names given
+# this function searches the number of names given
 # it gives the key value pair
 # if the name is not in the phonebook then it returns Not Found
 def search(n):
