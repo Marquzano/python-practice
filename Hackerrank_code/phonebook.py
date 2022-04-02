@@ -1,4 +1,4 @@
-# Enter your code here. Read input from STDIN. Print output to STDOUT
+# this code completes the phonebook challenge
 def entry(n):
     phonebook = {}
     for i in range(n):
@@ -9,7 +9,7 @@ def entry(n):
 def search(names):
     for name in names:
         if name not in phonebook:
-            print("Not Found")
+            print("Not found")
         else:
             number = phonebook.get(name)
             print(name + "=" + number)
@@ -20,8 +20,11 @@ if __name__ == '__main__':
     phonebook = entry(n)
     
     names = []
-    # need to figure out how to get a continuous stream of input
-    # then I need to determine when to stop trying to get input
-    # and send it to the function
-    names = input().split(" ")
+    while True:
+        try:
+            inp = input()
+            names.append(inp)
+        except:
+            break
+    
     search(names)
