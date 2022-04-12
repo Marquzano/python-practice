@@ -7,22 +7,35 @@
 # make an empty board
 def makeBoard(n):
     board = {}
-    for i in range(n):
-        board[i] = [''] * n
+    for i in range(n - 1, 0):
+        board[i] = [' '] * n
+    print(board)
     return board
+
+def prettyPrint(n, board):
+    # just print this in descending order?
+    for i in range(n):
+        print(board[i])
 
 def queensAttack(n, k, r_q, c_q, obstacles):
     board = makeBoard(n)
     # this populates the board with obstacles
     for i in range(k):
         pos = obstacles[i]
-        pos_x = pos[0]
-        pos_y = pos[1]
+        pos_x = pos[0] - 1
+        pos_y = pos[1] - 1
         board[pos_x][pos_y] = 'x'
-    # we may need to update the board dictionary to start on count 1 and not 0
-    # we did populate the board with the obstacles and queen
     # this places the queen on the board
-    board[r_q][c_q] = 'q'
-    print(board)
+    board[r_q - 1][c_q - 1] = 'q'
 
-queensAttack(5, 2, 0, 0, [[1,2],[3,1]])
+    # the dictionary needs to be made so that
+    # the rows need to be numbered from bottom to top 1 - n
+    # the columns need to be numbered from left to right 1 - n
+    # in the case of the dictionary it will be 0 - n-1
+    # does it really matter that the board I have has rows
+    # numbered from top to bottom 0 - n-1?
+    # more on this later
+
+    prettyPrint(n, board)
+
+queensAttack(5, 2, 3, 2, [[2,5],[4,3]])
