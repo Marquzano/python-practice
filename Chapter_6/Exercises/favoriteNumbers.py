@@ -1,6 +1,3 @@
-import email
-
-
 favorite_numbers = {'angel': 4,
                     'emily': 124,
                     'ryan': 69,
