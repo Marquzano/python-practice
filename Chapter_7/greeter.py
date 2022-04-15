@@ -1,6 +1,6 @@
 # this is here so that we do not need to constantly
-# give input when we are checking new code and we 
-# can keep track of where we're at in the file
+# give input when we are running new code and to 
+# keep track of where we're at in the file
 def uncommentCodeMessage(number):
     uncommentMessage = "Uncomment code " + str(number) + " to run it"
     print(uncommentMessage)
@@ -28,3 +28,13 @@ print("\n")
 
 # uncommentCodeMessage(3)
 # print("\n")
+age = input("How old are you? ")
+print("Age is of type: " + str(type(age)))
+
+# if you try to use this age as a number it will not work
+# so we resolve this by using the int() function
+# this typecasts the string into an integer so we can use
+# it as a number
+
+age = int(input("How old are you? "))
+print("Age is of type: " + str(type(age)))
