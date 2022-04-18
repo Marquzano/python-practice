@@ -19,6 +19,7 @@ if __name__ == '__main__':
     
     phonebook = entry(n)
     
+    # continue this tomorrow
     names = []
     while True:
         try:
