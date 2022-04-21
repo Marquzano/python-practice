@@ -1,0 +1,4 @@
+[chuck-norris-config]
+URL = https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random
+API_KEY = c07047df65msh89990b58ab6601bp164532jsn73e3d8f04db3
+API_HOST = matchilling-chuck-norris-jokes-v1.p.rapidapi.com
