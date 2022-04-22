@@ -5,20 +5,21 @@
 # given a sequence of steps we must determine how many valleys they have traversed
 
 def countingValleys(steps, path):
-    # we still have to keep track of the mountains
-    # to determine when they reach sea level to see
-    # if they go lower to keep count of valleys
     elevation = 0
-    valleys = 0
-    for elevStep in samplePath:
-        # maybe we could use a counter
-        # if elevation > 0 it's on a mountain
-        # if elevation == 0 it's at sea level
-        # if elevation < 0 it's in a valley
-        # in this last condition we can iterate valleys
-        print(elevStep)
+    valleys = 0 
+    for elevStep in path:
+        # we will determine the elevation like this:
+        if elevStep == 'U':
+            elevation += 1
+        elif elevStep == 'D':
+            elevation -= 1
+        # here we determine if we've stepped into a valley
+        if elevation == -1 and elevStep == 'D':
+            valleys += 1
+    return valleys
 
 
 
 samplePath = 'UUDDDDUUDU'
-countingValleys(len(samplePath), samplePath)
+numOfValleys = countingValleys(len(samplePath), samplePath)
+print("You traversed " + str(numOfValleys) + " valleys.")

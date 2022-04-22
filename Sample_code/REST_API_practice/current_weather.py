@@ -21,6 +21,12 @@ queryString = {
 # adding .json() method makes a JSON object into a Python/Dict object
 response = requests.request("GET", url, headers=headers, params=queryString).json()
 
+# I want to be able to parse and print the data I wish to see
+# I want the following
+# "weather": [{"main":, "description":,}]
+# "main": {"temp":, "feels_like":, "temp_min":, "temp_max":,}
+# "sys": {"country":,}
+# "name": ""
 main_weather = response['weather'][0]['main']
 description = response['weather'][0]['description']
 main_temp = str(response['main']['temp'])
@@ -37,9 +43,3 @@ print("\t main: " + main_temp)
 print("\t min: " + min_temp)
 print("\t max: " + max_temp)
 print("Overall it will feel like: " + feels_like)
-# I want to be able to parse and print the data I wish to see
-# I want the following
-# "weather": [{"main":, "description":,}]
-# "main": {"temp":, "feels_like":, "temp_min":, "temp_max":,}
-# "sys": {"country":,}
-# "name": ""
