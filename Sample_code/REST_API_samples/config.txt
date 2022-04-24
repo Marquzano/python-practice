@@ -1,0 +1,16 @@
+[chuck-norris]
+URL = https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random
+API_HOST = matchilling-chuck-norris-jokes-v1.p.rapidapi.com
+API_KEY = c07047df65msh89990b58ab6601bp164532jsn73e3d8f04db3
+
+[weather]
+URL = https://community-open-weather-map.p.rapidapi.com/weather
+API_HOST = community-open-weather-map.p.rapidapi.com
+API_KEY = c07047df65msh89990b58ab6601bp164532jsn73e3d8f04db3
+
+[covid]
+HIST_URL = https://covid-193.p.rapidapi.com/history
+STATS_URL = https://covid-193.p.rapidapi.com/statistics
+CTRY_URL = https://covid-193.p.rapidapi.com/countries
+API_HOST = covid-193.p.rapidapi.com
+API_KEY = c07047df65msh89990b58ab6601bp164532jsn73e3d8f04db3
