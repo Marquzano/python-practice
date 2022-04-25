@@ -13,7 +13,7 @@ import sys
 # The function accepts INTEGER n as parameter.
 #
 
-
+# this is an example of a recursive function
 def factorial(n):
     # base case
     if n == 1:
