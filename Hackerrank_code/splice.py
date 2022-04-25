@@ -16,7 +16,7 @@ def splice(n, words):
 
 if __name__ == '__main__':
     # take the input 
-    prompt = "Please give a number of words to splice then enter that number of words:"
+    prompt = "Please give the number of words to splice then enter those words one at a time:"
     prompt += "\nEnter a blank string to indicate when you are done. "
     num = int(input(prompt))
     words = []
