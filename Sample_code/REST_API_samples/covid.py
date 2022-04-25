@@ -1,4 +1,4 @@
-# with this API I could begin doing my own work on modeling the progression of the covid-19 pandemic
+# with this API I could begin doing my own work on modeling the progression of the covid-19 pandemic :o
 
 import requests
 import configparser
