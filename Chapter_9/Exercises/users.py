@@ -21,8 +21,6 @@ class Users():
         """Gives a proper greeting to the user"""
         print("Hello " + self.first_name.title() + " " + self.last_name.title() + "!")
 
-# need to finish
-
 angel = Users('angel', 'marquez', 24, 'software engineer', False)
 angel.describe_user()
 angel.greet_user()
