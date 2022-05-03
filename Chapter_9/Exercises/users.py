@@ -15,10 +15,20 @@ class Users():
         print(full_name + ":")
         print("- " + str(self.age) + " years old.")
         print("- " + self.occupation.title())
-        print("- single? " +  str(self.single()))
+        print("- single? " +  str(self.single))
 
     def greet_user(self):
         """Gives a proper greeting to the user"""
         print("Hello " + self.first_name.title() + " " + self.last_name.title() + "!")
 
 # need to finish
+
+angel = Users('angel', 'marquez', 24, 'software engineer', False)
+angel.describe_user()
+angel.greet_user()
+martha = Users('martha', 'campbell', 35, 'accountant', False)
+martha.describe_user()
+martha.greet_user()
+jake = Users('jake', 'peralta', 32, 'cop', True)
+jake.describe_user()
+jake.greet_user()
