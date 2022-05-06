@@ -1,4 +1,4 @@
-"""This holds the classes necessary to model a restaurant."""
+
 
 class Restaurant():
     """The model of a common restaurant."""
@@ -16,3 +16,19 @@ class Restaurant():
     def open_restaurant(self):
         """Gives the notification that the restaurant is open."""
         print(self.name.title() + " is open!")
+
+restaurant = Restaurant("la mexicana", "mexican")
+print(restaurant.name)
+print(restaurant.cuisine_type)
+restaurant.describe_restaurant()
+restaurant.open_restaurant()
+print("\n")
+
+restaurant2 = Restaurant("sunflower cafe", "vegan")
+restaurant3 = Restaurant("the corner pub", "americana")
+
+restaurant.describe_restaurant()
+print("\n")
+restaurant2.describe_restaurant()
+print("\n")
+restaurant3.describe_restaurant()
