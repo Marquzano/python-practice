@@ -1,0 +1,3 @@
+In Python you can iterate through a list by making a temporary variable that will hold each value from a list to be viewed or manipulated in a for loop.
+In Python you can reference a classes attributes with dot notation.
+In Python you can import code from other folders by accessing modules through dot notation regarding their relative folder location in a project.
