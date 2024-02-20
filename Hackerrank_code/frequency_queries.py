@@ -27,6 +27,8 @@ import re
 import sys
 
 # Complete the freqQuery function below.
+# this solution has a very high time complexity so it was not able to pass
+# testing and optimizing here in VS Code
 def freqQuery(queries):
     # create the 2D hashmap of the queries
     resultantArr = []
@@ -50,7 +52,6 @@ def freqQuery(queries):
             # the value would be the number of instances of the 'value' which is
             # the key
             numberOfInstances = {}
-            # j = 0
             manResultantArr = resultantArr
             while manResultantArr:
                 if manResultantArr[0] in numberOfInstances.keys():
@@ -66,20 +67,21 @@ def freqQuery(queries):
                 output.append(0)
     return output
             
-
+# hardcoded sample queries
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+    # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-    q = int(input().strip())
+    # q = int(input().strip())
 
-    queries = []
+    queries = [[1,1],[2,2],[3,2],[1,1],[1,1],[2,1],[3,2]]
 
-    for _ in range(q):
-        queries.append(list(map(int, input().rstrip().split())))
+    # for _ in range(q):
+    #     queries.append(list(map(int, input().rstrip().split())))
 
     ans = freqQuery(queries)
+    print(ans)
 
-    fptr.write('\n'.join(map(str, ans)))
-    fptr.write('\n')
+    # fptr.write('\n'.join(map(str, ans)))
+    # fptr.write('\n')
 
-    fptr.close()
+    # fptr.close()
