@@ -31,7 +31,7 @@ class Solution:
                             20:'T', 21:'U', 22:'V', 23:'W', 24:'X', 25:'Y', 26:'Z'}
 
         columnTitle = []
-        lastModulus = 0
+        lastRemainder = 0
 
         if columnNumber < 27:
             return letterDictionary[columnNumber]
