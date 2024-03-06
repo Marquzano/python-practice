@@ -25,7 +25,8 @@ class Solution:
             nums.remove(target)
             # check if there is even another position to note
             if target not in nums:
-                # if not, return what we have as first and last position
+                # if not, return the same index twice as first and last position
+                positions.append(positions[0])
                 return positions
             nums.sort(reverse = True)
             positions.append(abs(nums.index(target) - len(nums)))
