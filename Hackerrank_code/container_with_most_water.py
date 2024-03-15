@@ -15,9 +15,9 @@
 
 # below is what I have so far
 # seems to work but I need to optimize further
-# need to make sense of the j and i index
+# need to make sense of the j index
 class Solution:
-    def maxArea(self, height: List[int]) -> int:
+    def maxArea(self, height) -> int:
         # identify the index of the greatest height in height arr
         # I will write the brute force solution first
         areas = []
@@ -51,3 +51,9 @@ class Solution:
         # print(areas)
         maxArea = max(areas)
         return maxArea
+
+# test code
+# output should be 120
+soln = Solution
+output = soln.maxArea(soln,[4,10,2,5,9,6,6,10,8,5,7,1,2,10,4,3,6,3,5,4])
+print(output)
