@@ -27,7 +27,7 @@ import re
 import sys
 
 # Complete the freqQuery function below.
-# this solution has a very high time complexity so it was not able to pass
+# this solution has a very inefficient time complexity so it was not able to pass
 # testing and optimizing here in VS Code
 def freqQuery(queries):
     # create the 2D hashmap of the queries
