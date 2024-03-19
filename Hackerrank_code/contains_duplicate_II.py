@@ -10,51 +10,38 @@
 # will need to check how to optimize after making proper solutions
 
 class Solution:
-    def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
+    def containsNearbyDuplicate(self, nums, k: int) -> bool:
         # define a dictionary
         # keys: value
-        # value: list where 
-        # [0] = number of instances
-        # [1,i] = indeces of the value in list nums
+        # value: array of it's indices
 
         numberOfInstances = {}
-        # manNums = nums
-
-        # to populate the dictionary
-        # go through the values of nums/manNums
         i = 0
-        while i <= len(nums) - 1:
-            # take value
-            # check if the value is already in numberOfInstances
-            if nums[i] in numberOfInstances.keys():
-                # it is so:
-                # we iterate +1 on [0]
-                # append the index to the list
-                numberOfInstances[nums[i]][0] += 1
+
+        # populate numberOfInstances
+        for i in range(len(nums)):
+            if nums[i] not in numberOfInstances.keys():
+                numberOfInstances[nums[i]] = [i]
+            elif nums[i] in numberOfInstances.keys():
                 numberOfInstances[nums[i]].append(i)
-            else:
-                numberOfInstances[nums[i]] = [1,i]
             i += 1
+
+        # now go through each value in numberOfInstances
+        for indices in numberOfInstances.values():
+            # pop the first value and get the absolute difference
+            # from the remaining values in the array
+            # while indices still has at least one value in it
+            while len(indices) >= 2:
+                check = indices.pop(0)
+                for value in indices:
+                    if abs(value - check) <= k:
+                        return True
         
-        # see if this populates correctly
-        print(numberOfInstances)
-
-        # check values[0] if there are duplicates
-        # if there are go through [1,i]
-        # calculate the absolute differences
-        # until one is <= k
-        for arr in numberOfInstances.values():
-            if arr[0] == 1:
-                continue
-            else:
-                i = 0
-                j = 0
-                for i in range(1,len(arr)-2):
-                    for j in range(2,len(arr)-1):
-                        if abs(arr[i] - arr[j]) <= k:
-                            return True
-                        else:
-                            j += 1
-                    i += 1
-
         return False
+
+# test case
+soln = Solution
+nums = [1,2,3,4,1]
+k = 3
+result = soln.containsNearbyDuplicate(soln,nums,k)
+print(result)
